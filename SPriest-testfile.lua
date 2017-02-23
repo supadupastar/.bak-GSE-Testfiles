@@ -53,13 +53,13 @@ Sequences['SPriest'] = {
       },
       PreMacro={
       },
-        "/cast [combat, nochanneling:Void Torrent] Void Eruption",
-        "/castsequence [combat, nochanneling:Void Torrent] Shadow Word: Death, Shadow Word: Death, Mind Blast, Mind Blast",
-        "/castsequence [combat, nochanneling:Void Torrent] Mind Blast, Mind Blast",
-        "/castsequence [combat, nochanneling:Void Torrent] Mind Flay, Mind Flay",
-        "/castsequence [combat, nochanneling:Void Torrent] Mind Blast, Mind Blast",
+        "/cast [nochanneling:Void Torrent] Void Eruption",
+        "/castsequence [nochanneling:Void Torrent] Shadow Word: Death, Shadow Word: Death, Mind Blast",
+        "/cast [nochanneling:Void Torrent] Mind Blast",
+        "/castsequence [nochanneling:Void Torrent] Mind Flay, Mind Flay",
+        "/cast [nochanneling:Void Torrent] Mind Blast",
+		"/cast [nochanneling:Shadow Word: Pain] Void Torrent",		
         "/cast [combat, nochanneling:Void Torrent] Mindbender",
-		"/castsequence [harm,nodead][@targettarget,harm,nodead][@targettargettarget,harm,nodead][@targettargettargettarget,harm,nodead][@targettargettargettargettarget,harm,nodead] Shadow Word: Pain, Vampiric Touch",
       PostMacro={
       },
       KeyRelease={
@@ -91,8 +91,9 @@ Sequences['SPriest_def'] = {
       PreMacro={
       },
         "/cast [combat, nochanneling] Psychic Scream",
-        "/use Healthstone",
         "/cast [combat, nochanneling: Shadow Word: Pain][@player] Power Word: Shield",
+        "/cast [combat, nochanneling] Dispersion",
+        "/use Healthstone",		
       PostMacro={
       },
       KeyRelease={
