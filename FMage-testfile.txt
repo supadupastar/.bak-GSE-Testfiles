@@ -1,0 +1,57 @@
+Blazing Barrier	
+Cauterize (Passive)	
+Combustion	
+Critical Mass (Passive)	
+Critical Mass (Passive)	
+Dragon's Breath	
+Enhanced Pyrotechnics (Passive)	
+Fireball	
+Fire Blast	
+Fire Blast (Passive)	
+Fire Blast (Passive)	
+Flamestrike	
+Hot Streak (Passive)	
+Invisibility	
+Mastery: Ignite (Passive)	
+Pyroblast	
+Scorch
+
+Phoenix's Flames
+
+Sequences['SAM_Fire'] = {
+-- This Sequence was exported from GSE 2.0.14.
+  Author="Unknown Author",
+  SpecID=63,
+  Talents = "?,?,?,?,?,?,?",
+  Default=1,
+  Icon='Spell_Fire_FireBolt02',
+  MacroVersions = {
+    [1] = {
+      Trinket1=false,
+      Trinket2=false,
+      Head=false,
+      Neck=false,
+      Belt=false,
+      Ring1=false,
+      Ring2=false,
+      StepFunction = [[Sequential]],
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+      },
+      PreMacro={
+      },
+        "/cast scorch",
+        "/cast Fire blast",
+        "/cast Fireball",
+        "/cast cinderstorm",
+        "/cast phoenix's Flames",
+        "/cast Combustion",
+        "/cast blazing barrier",
+        "/cast Pyroblast",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
+}
