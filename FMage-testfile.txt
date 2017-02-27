@@ -17,6 +17,59 @@ Pyroblast
 Scorch
 
 Phoenix's Flames
+==============================================================
+TEST CODES
+==============================================================
+/cast scorch
+/cast Fire blast
+/cast Fireball
+/cast phoenix's Flames
+/cast living bomb
+/cast blazing barrier
+
+
+
+/castsequence [no channeling] Fireball, Scorch
+/cast Phoenix's Flames
+/cast Living Bomb
+/castsequence [no channeling] Fire Blast, Fire Blast, Fire Blast
+/cast [no channeling] Fireball
+
+Sequences['FizzleFire'] = {
+  Author="Fizzlespark@Doomhammer",  
+  SpecID=63,
+  Talents = "2122112",
+  Help = "Keep Pyroblast on a seperate key to watch for procs",
+  Default=1,
+  MacroVersions = {
+    [1] = {
+      StepFunction = "Sequential",
+      KeyPress={
+        "/assist [@focus]",
+        "/targetenemy [noexists][noharm][dead]",
+      },
+      PreMacro={
+      },
+        "/cast [mod:alt] Rune of Power",
+        "/castsequence [no channeling] Combustion, Scorch",
+        "/cast Phoenix's Flames",
+        "/cast Living Bomb",
+        "/cast [no channeling] Fire Blast",
+        "/cast [no channeling] Fireball",
+        "/cast Cinderstorm",
+        "/cast [mod:ctrl] Dragon's Breath",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
+}
+
+==============================================================
+BACKUP
+==============================================================
+
 
 Sequences['SAM_Fire'] = {
 -- This Sequence was exported from GSE 2.0.14.
