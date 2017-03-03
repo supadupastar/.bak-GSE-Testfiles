@@ -1,0 +1,187 @@
+#showtooltip
+/click AFF_dots
+
+#showtooltip
+/click AFF_drain
+
+#showtooltip
+/click HP_EX_Aff_AoE
+
+#showtooltip
+/click HP_EX_Aff_ST
+
+
+#showtooltip
+/click Havoc
+
+
+
+
+Sequences['AFF_dots'] = {
+-- This Sequence was exported from GSE 2.0.14.
+  Author="Unknown Author",
+  SpecID=265,
+  Talents = "?,?,?,?,?,?,?",
+  Default=1,
+  MacroVersions = {
+    [1] = {
+      Trinket1=false,
+      Trinket2=false,
+      Head=false,
+      Neck=false,
+      Belt=false,
+      Ring1=false,
+      Ring2=false,
+      StepFunction = [[Sequential]],
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+      },
+      PreMacro={
+      },
+        "/cast [@mouseover] Agony",
+        "/cast [@mouseover] Corruption",
+        "/cast [@mouseover] Siphon Life",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
+}
+
+
+
+Sequences['AFF_drain'] = {
+-- This Sequence was exported from GSE 2.0.14.
+  Author="Unknown Author",
+  SpecID=265,
+  Talents = "?,?,?,?,?,?,?",
+  Default=1,
+  MacroVersions = {
+    [1] = {
+      Trinket1=false,
+      Head=false,
+      Neck=false,
+      Belt=false,
+      Ring1=false,
+      Ring2=false,
+      StepFunction = [[Sequential]],
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+      },
+      PreMacro={
+      },
+        "/cast [nochanneling] Unstable Affliction",
+        "/castsequence [nochanneling] Unstable Affliction, Drain Soul, Reap Souls",
+        "/cast [nochanneling] Drain Soul",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
+}
+
+
+
+
+Sequences['HP_EX_Aff_AoE'] = {
+-- This Sequence was exported from GSE 2.0.14.
+  Author="Unknown Author",
+  SpecID=265,
+  Talents = "?,?,?,?,?,?,?",
+  Default=1,
+  Icon='Spell_Shadow_DeathCoil',
+  MacroVersions = {
+    [1] = {
+      Trinket1=false,
+      Head=false,
+      Neck=false,
+      Belt=false,
+      Ring1=false,
+      Ring2=false,
+      StepFunction = [[Sequential]],
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/use [mod:ctrl] Drain Soul",
+        "/castsequence  reset=target  Agony, Corruption, Siphon Life, null",
+      },
+      PreMacro={
+      },
+        "/castsequence Seed of Corruption, Seed of Corruption, Seed of Corruption, Agony",
+        "/cast Reap Souls",
+      PostMacro={
+      },
+      KeyRelease={
+        "/petautocastoff [group] Seethe",
+        "/petautocastoff [group] Burning Presence",
+        "/petautocaston [nogroup] Seethe",
+        "/petautocaston [nogroup] Burning Presence",
+      },
+    },
+  },
+}
+
+Sequences['HP_EX_Aff_ST'] = {
+-- This Sequence was exported from GSE 2.0.14.
+  Author="Unknown Author",
+  SpecID=265,
+  Talents = "?,?,?,?,?,?,?",
+  Default=2,
+  Icon='Spell_Shadow_DeathCoil',
+  MacroVersions = {
+    [1] = {
+      Trinket1=false,
+      Head=false,
+      Neck=false,
+      Belt=false,
+      Ring1=false,
+      Ring2=false,
+      StepFunction = [[Sequential]],
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+      },
+      PreMacro={
+      },
+        "/cast [nochanneling] Unstable Affliction",
+        "/castsequence [nochanneling] Unstable Affliction, Drain Soul, Reap Souls",
+        "/cast [nochanneling] Drain Soul",
+      PostMacro={
+      },
+      KeyRelease={
+        "/petautocastoff [group] Seethe",
+        "/petautocastoff [group] Burning Presence",
+        "/petautocaston [nogroup] Seethe",
+        "/petautocaston [nogroup] Burning Presence",
+      },
+    },
+    [2] = {
+      StepFunction = [[Sequential]],
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/use [mod:ctrl] Drain Soul",
+        "/castsequence  reset=target  Agony, Corruption, Siphon Life, null",
+      },
+      PreMacro={
+      },
+        "/castsequence [nochanneling] reset=combat/reset  Agony, Corruption, Siphon Life, Drain Soul",
+        "/cast [nochanneling] Unstable Affliction",
+        "/castsequence [nochanneling] Unstable Affliction, Drain Soul, Reap Souls",
+        "/castsequence [nochanneling] Phantom Singularity, Mortal Coil",
+      PostMacro={
+      },
+      KeyRelease={
+        "/petautocastoff [group] Seethe",
+        "/petautocastoff [group] Burning Presence",
+        "/petautocaston [nogroup] Seethe",
+        "/petautocaston [nogroup] Burning Presence",
+      },
+    },
+  },
+}
+
+
+
+
+
+
